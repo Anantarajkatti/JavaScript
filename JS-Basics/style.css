@@ -1,0 +1,30 @@
+header{
+    display:flex;
+    justify-content: space-around;
+    position:relative;
+}
+
+.logo{
+    display: flex ;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.logo img{
+    width:4vw;
+    height:10vw;
+}
+
+.login{
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+.login-image  img{
+    width:4vw;
+    height:4vw;
+}
+
+   
