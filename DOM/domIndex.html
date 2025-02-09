@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <h1>This is Form</h1>
+    <form id="myform">
+      <label for="fname">First Name</label>
+      <input
+        name="fname"
+        type="text"
+        value="aaaaa"
+        oninput="console.log(this.value)"
+      />
+      <label for="lname">Last Name</label>
+      <input name="lname" type="text" value="bbbbb" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <table id="myTable" border="1">
+      <tr>
+        <td>conent</td>
+        <td>content</td>
+      </tr>
+    </table>
+    <input type="button" onclick="addRow()" value="submit" />
+
+    <p> Click Event</p>
+    <button onclick="clicked()">Click a Button</button>
+    <p id="paragraph"></p>
+
+    <p>Drop Down Options</p>  
+    <p> manual</p>
+    <div class="dropdown">
+      <button onclick="toggle()">click to see drop down</button>
+      <div class="list" style="display:none">
+        <ul>
+          <li>something</li>
+          <li>somewhere</li>
+          <li>somehow</li>
+        </ul>
+      </div>
+
+<p> this is inbuild dropdown</p>
+    </div>
+    <div>
+      <div>
+        <select>
+          <option>asda</option>
+          <option>asda</option>
+          <option>asda</option>
+          <option>asda</option>
+
+        </select>
+      </div>
+    </div>
+<p> Mouse Enter Background Change</p>
+<div id="myDiv" style="width:100px;height:100px"> my div</div>
+
+
+<div class="container" id="parent">
+  Hover over me (Parent)
+  <div class="child" id="child">I am a child</div>
+</div>
+
+<p id="output"></p>
+
+    <script src="Dom.js" async defer></script>
+  </body>
+</html>
