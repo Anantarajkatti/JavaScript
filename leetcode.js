@@ -111,3 +111,27 @@
 // 1 1 3 2
 // Sample Output :
 // 2 3 1
+
+let array = [1, 3, 2, 1];
+
+array.sort((x, y) => x - y);
+console.log(array);
+
+// Prime Number or not
+function checkPrimeNumber(number) {
+  if (number === 1 || number % 2 === 0) {
+    console.log("It is not prime Number");
+    return true;
+  } else
+    for (let i = 3; i < number; i++) {
+      if (number % i === 0) {
+        console.log("it is not prime");
+        return true;
+      } else if (i === number - 1) {
+        console.log("Yes it is a prime Number");
+        return true;
+      }
+    }
+}
+
+checkPrimeNumber(21);
