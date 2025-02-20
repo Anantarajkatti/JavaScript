@@ -33,8 +33,46 @@
 
     <img src="image.jpg" alt="An example image" height="200">
     <h1>I love JavaScript</h1>
+
+    <div style="width: 100px;height: 100px;border: 1px solid black;position: absolute;right: 40px;top:10px;"></div>
+
+
+    <div class="gridcontainer" style="display: grid;grid-template-columns:1fr 1fr;grid-template-rows: 2fr 2fr;">
+      <div style="width: 100px;height: 100px;border: 1px solid black;">div</div>
+      <div style="width: 100px;height: 100px;border: 1px solid black;">div</div>
+      <div style="width: 100px;height: 100px;border: 1px solid black;">div</div>
+      <div style="width: 100px;height: 100px;border: 1px solid black;">div</div>
+      <div style="width: 100px;height: 100px;border: 1px solid black;">div</div>
+      <div style="width: 100px;height: 100px;border: 1px solid black;">div</div>
+    </div>
+    
+<a href="https://www.w3schools.com/html/default.asp">hello</a>
+
+<div class="practice" >
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7777.30939761635!2d77.45971530675888!3d12.929900836096285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3933d34fe45d%3A0xbf61aec14bd92c00!2z4LKV4LOK4LKu4LON4LKu4LKY4LKf4LON4LKfIOCyh-CyoeCzjeCysuCyvyDgsrngs4rgsp_gs4fgsrLgs40!5e0!3m2!1sen!2sin!4v1739073449976!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<div class="Form">
+  <form id="form" >
+    <input id="i1" type="text" value="jhon"/>
+    <input id="i2" type="text" value="bhai"/>
+    <input type="submit"/>
+  </form>
+</div>
+    
    
-    <script src="Bom.js" async defer></script>
-    <script src="Dom.js" async defer></script>
+    <!-- <script src="Bom.js" async defer></script>
+    <script src="Dom.js" async defer></script> -->
+    <script>
+      let form= document.getElementById('form')
+      form.addEventListener("submit",(event)=>{
+          event.preventDefault()
+          let i1= document.getElementById("i1").value
+          let i2= document.getElementById('i2').value
+          console.log(i1,i2)
+      })
+
+      
+
+    </script>
   </body>
 </html>
