@@ -1,3 +1,57 @@
+//var (Allows redeclaration & reinitialization)
+
+var x = 10;
+var x = 20; // ✅ Redeclaration allowed
+x = 30; // ✅ Reinitialization allowed
+console.log(x); // 30
+
+//inside a block
+var a = 10;
+if (true) {
+  var a = 20; // ✅ Redeclaration allowed, affects outer scope
+  console.log(a); // 20
+}
+console.log(a); // 20 (unexpected behavior)
+//Why? var does not have block scope; it affects the whole function or global scope.
+
+//let (No redeclaration, but allows reinitialization)
+let y = 10;
+// let y = 20; // ❌ Redeclaration NOT allowed (SyntaxError)
+y = 30; // ✅ Reinitialization allowed
+console.log(y); // 30
+
+//let inside block
+let b = 10;
+if (true) {
+  let b = 20; // ✅ No error, because it's a different block scope
+  console.log(b); // 20
+}
+console.log(b); // 10 (outer `b` is unchanged)
+
+//var after let
+let c = 10;
+// var c = 20; // ❌ SyntaxError: Identifier 'c' has already been declared
+console.log(c);
+
+///Hoisting with var vs. let
+console.log(d); // undefined (hoisted, but not initialized)
+var d = 10;
+
+console.log(e); // ❌ ReferenceError: Cannot access 'e' before initialization
+let e = 20;
+// const (No redeclaration & no reinitialization)
+
+const z = 10;
+// const z = 20; // ❌ Redeclaration NOT allowed (SyntaxError)
+// z = 30;       // ❌ Reinitialization NOT allowed (TypeError)
+console.log(z); // 10
+
+// Temporal dead zone
+// A Temporal Dead Zone (TDZ) is a region in the code where variables and functions declared using let or const are not accessible.
+//  when a varible is declared with "let" and "const" they are hoisted but not initialized. so they are in temporal dead zone.
+//  so accessing before initiation throws refrence error
+//  but when a variable is declared with "var" they are hoistred and initiated with "undefined"
+
 // let x=new String("string")
 // let y= new String("string")
 
@@ -23,16 +77,14 @@
 
 // console.log(newArray)
 
-
 // const person = ["fname" ,"John" ,"lname:Doe", "age:25"];
 
 // let text = "";
 // for (let x of person) {
 //  console.log(x)
- 
+
 // }
 // console.log(text)
-
 
 // var x
 // var y
@@ -63,19 +115,18 @@
 
 // object1.fullname
 
-
 // const person = {
 
 //     fullName: function() {
 //       return this.firstName + " " + this.lastName;
 //     }
 //   }
-  
+
 //   const member = {
 //     firstName:"Hege",
 //     lastName: "Nilsen",
 //   }
-  
+
 // //   let fullName = person.fullName.bind(member);
 
 //   console.log(person.fullName.bind(member))
@@ -92,7 +143,7 @@
 
 //     getAge(){
 //         const date=new Date()
-        
+
 //         const age=date.getFullYear()-this.year;
 //         return age
 //     }
@@ -101,7 +152,6 @@
 // const ford= new Car("Ford",2014)
 
 // console.log(ford.getAge())
-
 
 // class inheritence property - is used for properties and methods reusability when you create new class that has same properties as previosly created
 
@@ -134,7 +184,6 @@
 
 //getter and setter------------------------------------------------------
 
-
 // class Car{
 //     constructor(name,age,mobileNo)
 //     {
@@ -145,7 +194,7 @@
 //     }
 
 //     set _city(city){   /////   property  name and setter/getter Name should not be Same
-       
+
 //        this.city=city
 //     }
 
@@ -160,7 +209,7 @@
 // console.log(fortuner)
 // console.log(fortuner._city)
 
-//static method- it is a mthod that is defined and used in and on Class 
+//static method- it is a mthod that is defined and used in and on Class
 // yo cannot use this method on object
 //BUT you can send object as parameter to this method
 
@@ -194,13 +243,13 @@
 
 // Asynchronous  -- functions running in parellell is Async functions
 
-  //setTimeout( function, delay)
+//setTimeout( function, delay)
 
 //  setTimeout(()=>{               //When you pass a function as an argument, remember not to use parenthesis.
 //     console.log(functionDemo())  //setTimeout(myFunction, 3000)
 //   },3000)
 
-//   function functionDemo(){                  
+//   function functionDemo(){
 //     return "this is delayed function"
 //   }
 
@@ -212,6 +261,6 @@
 //     return "this is delayed function"
 //   }
 
-const array=[10,80,30,20]
-array.sort()
-console.log(array)
+const array = [10, 80, 30, 20];
+array.sort();
+console.log(array);
